@@ -2,21 +2,24 @@
 
 @section('content')
     <div class="container d-flex justify-content-start">
-        <div class="div">
-            <h1>treni</h1>
+        <div class="div w-100">
+            <h1>treni in partenza oggi</h1>
             @foreach ($trains as $singleTrain)
-                <div>
-                    <div class="card mb-2" >
-                        <img src="https://thumbs.dreamstime.com/b/treno-27907878.jpg" alt="">
-                        <div class="card-body">
-                            <div>Azienda:<strong>{{ $singleTrain->name }}</strong></div>
-                            <div>Stazione di partenza:<strong>{{ $singleTrain->departure_station}}</strong></div>
-                            <div>Stazione di arrivo :<strong>{{ $singleTrain->arrival_station }}</strong></div>
-                            <div>Orario di Partenza:<strong>{{ $singleTrain->time_departure }}</strong></div>
-                            <div>Orario di arrivo:<strong>{{ $singleTrain->time_arrival }}</strong></div>
-                            <div>Codice:<strong>{{ $singleTrain->code}}</strong></div>
-                            <div>Numero Carrozze:<strong>{{ $singleTrain->carriages }}</strong></div>
-                            <div><strong>{{ $singleTrain->in_time }}</strong></div>
+                <div class="ms_bg">
+                    <div class="ms_overlay_card"></div>
+                    <div class="ms_card card mb-2 border border-success border-3">
+                        <div class="ms_overlay"></div>
+                        <div class="d-flex justify-content-center align-items-center h-100 text-center position-relative fs-5">
+                            <div>
+                                <div class="ms_bg_color">Azienda:<strong>{{ $singleTrain->name }}</strong></div>
+                                <div class="ms_bg_color">Stazione di partenza:<strong>{{ $singleTrain->departure_station }}</strong></div>
+                                <div class="ms_bg_color">Stazione di arrivo :<strong>{{ $singleTrain->arrival_station }}</strong></div>
+                                <div class="ms_bg_color">Orario di Partenza:<strong>{{ $singleTrain->time_departure }}</strong></div>
+                                <div class="ms_bg_color">Orario di arrivo:<strong>{{ $singleTrain->time_arrival }}</strong></div>
+                                <div class="ms_bg_color">Codice:<strong>{{ $singleTrain->code }}</strong></div>
+                                <div class="ms_bg_color">Numero Carrozze:<strong>{{ $singleTrain->carriages }}</strong></div>
+                                <div class="ms_bg_color"><strong>{{ $singleTrain->in_time }}</strong></div>
+                            </div>
                         </div>
                     </div>
                 </div>

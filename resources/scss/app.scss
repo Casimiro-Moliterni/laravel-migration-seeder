@@ -1,1 +1,34 @@
 @import '~bootstrap/scss/bootstrap';
+main{
+    background-color: #EFBD4A;
+}
+
+.card img{
+     object-fit: contain;
+     height: 100px;
+}
+
+.card{
+    border-radius: 100%;
+    width: 500px;
+    height: 500px;
+}
+
+.ms_overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://thumbs.dreamstime.com/b/treno-27907878.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100%;
+}
+
+.ms_bg_color{
+    background-color: rgba($color: #EFBD4A, $alpha: 0.4);
+    margin-bottom: 3px;
+    border-radius: 10px;
+    width: max-content;
+    padding: 2px;
+}
