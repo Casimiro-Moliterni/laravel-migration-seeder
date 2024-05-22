@@ -17,9 +17,9 @@ return new class extends Migration {
             $table->string('name',100);//  Azienda
             $table->string('departure_station',100);//  Stazione di partenza
             $table->string('arrival_station',100);// Stazione di arrivo
-            $table->dateTime('time_departure',);// Orario di partenza 
-            $table->dateTime('time_arrival',);// Orario di arrivo
-            $table->tinyInteger('code')->unsigned();// Codice Treno
+            $table->time('time_departure',);// Orario di partenza 
+            $table->time('time_arrival',);// Orario di arrivo
+            $table->string('code');// Codice Treno
             $table->tinyInteger('carriages')->unsigned();// Numero Carrozze
             $table->string('in_time');// In orario
             $table->string('late');// Cancellato
