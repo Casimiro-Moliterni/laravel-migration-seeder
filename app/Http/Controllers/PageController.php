@@ -8,7 +8,7 @@ class PageController extends Controller
 {
     //
     public function index(){
-        $trains = Train::all();
+      $trains = Train::whereDate('time_departure', '>=', today())->get();
         $data=[
           "trains"=>$trains
         ];

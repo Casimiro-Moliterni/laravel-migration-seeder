@@ -21,12 +21,12 @@ class TrainsTableSeeder extends Seeder
             $newTrain->name=$faker->randomElement(['Italo', 'FrecciaRossa', 'Treni Italia', 'Intercity', 'Regional','Luxury']);
             $newTrain->departure_station=$faker->city();
             $newTrain->arrival_station=$faker->city();
-            $newTrain->time_departure= $faker->time();
-            $newTrain->time_arrival=$faker->time();
+            $newTrain->time_departure=  $faker->dateTimeBetween('-1 day', '+1 day');
+            $newTrain->time_arrival=$faker->dateTimeBetween('-1 day', '+2 day');
             $newTrain->code=$faker->numerify('##########');
             $newTrain->carriages=$faker->numberBetween(1,30);;
-            $newTrain->in_time='In Orario';
-            $newTrain->late='In Ritardo';
+            $newTrain->on_time = $faker->boolean();
+            $newTrain->cancelled = $faker->boolean();
             $newTrain->save();
             dd($newTrain);
         }

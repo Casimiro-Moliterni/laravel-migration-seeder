@@ -18,7 +18,6 @@
                                 <div class="ms_bg_color">Orario di arrivo:<strong>{{ $singleTrain->time_arrival }}</strong></div>
                                 <div class="ms_bg_color">Codice:<strong>{{ $singleTrain->code }}</strong></div>
                                 <div class="ms_bg_color">Numero Carrozze:<strong>{{ $singleTrain->carriages }}</strong></div>
-                                <div class="ms_bg_color"><strong>{{ $singleTrain->in_time }}</strong></div>
                             </div>
                         </div>
                     </div>
